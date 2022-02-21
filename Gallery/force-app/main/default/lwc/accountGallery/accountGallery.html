@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_8-of-12 slds-p-right_xx-small">
+            <c-find-an-account onselectaccount={handleSelectAccount}></c-find-an-account>
+        </div>
+        <div class="slds-col slds-size_4-of-12 slds-p-left_xx-small">
+            <c-account-details account-id={selectedAccountId}></c-account-details>
+        </div>
+    </div>
+</template>

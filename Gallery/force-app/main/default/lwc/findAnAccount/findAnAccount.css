@@ -1,0 +1,6 @@
+.section-astro {
+    cursor: pointer;
+  }
+.section-astro:hover {
+    --slds-c-card-color-border: #01a4e7;
+  }

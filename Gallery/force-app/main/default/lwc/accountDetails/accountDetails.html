@@ -1,0 +1,44 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col">
+                <div class="slds-text-heading_medium">Details</div>
+            </div>
+        </div>
+        <template if:true={accountDetails}>
+            <article class="slds-card slds-m-top_large">
+                <div class="slds-grid slds-wrap slds-p-around_x-small">
+                    <div class="slds-col">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-12">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-account" title="Account">
+                                        <lightning-icon icon-name="standard:account" alternative-text="Account" title="Account"></lightning-icon>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_8-of-12 slds-text-heading_small slds-p-top_small">
+                                {accountDetails.Name}
+                            </div>
+                            <div class="slds-col slds-size_3-of-12">
+                                <button class="slds-button slds-button_neutral" onclick={navigateToAccount}>Full details</button>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                Account type: {accountDetails.Type}
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                Industry: {accountDetails.Industry}
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                Budget: {accountDetails.Budget__c}
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                Description: {accountDetails.Description}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </template>
+    </div>
+</template>
